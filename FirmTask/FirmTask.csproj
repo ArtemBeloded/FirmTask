@@ -43,15 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Containers\MyCollection.cs" />
+    <Compile Include="Containers\MyCollectionExtension.cs" />
     <Compile Include="Models\BaseEmployee.cs" />
     <Compile Include="Models\Employees\Brigadier.cs" />
-    <Compile Include="Containers\MyContainers.cs" />
     <Compile Include="Models\EmployeeCollection.cs" />
     <Compile Include="Models\Firm.cs" />
     <Compile Include="Models\Employees\Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Employees\Worker.cs" />
+    <Compile Include="Services\OperationWithCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

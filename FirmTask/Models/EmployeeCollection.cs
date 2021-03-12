@@ -9,11 +9,11 @@ namespace FirmTask.Models
 {
     public class EmployeeCollection<T>
     {
-        public MyContainers<T> Collection { get; set; }
+        public MyCollection<T> EpmloyeeContainer { get; set; }
 
         public EmployeeCollection()
         {
-            Collection = new MyContainers<T>();
+            EpmloyeeContainer = new MyCollection<T>();
         }
     }
 }

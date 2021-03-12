@@ -14,6 +14,9 @@ namespace FirmTask
 
         public void ToWork() { }
 
-        public void About() { }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
