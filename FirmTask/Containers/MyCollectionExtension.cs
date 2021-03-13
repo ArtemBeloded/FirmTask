@@ -8,7 +8,7 @@ namespace FirmTask.Containers
 {
     public static class MyCollectionExtension
     {
-        public static bool IsContain(this MyCollection<BaseEmployee> collection, BaseEmployee value) 
+        public static bool IsContain(this IEnumerable<BaseEmployee> collection, BaseEmployee value) 
         {
             return collection.Contains(value);
         }

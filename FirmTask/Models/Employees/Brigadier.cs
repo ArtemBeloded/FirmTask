@@ -8,7 +8,6 @@ namespace FirmTask
 {
     public class Brigadier : BaseEmployee
     {
-
         public new void ToWork()
         {
             Console.WriteLine("Purchase of materials");
@@ -17,6 +16,11 @@ namespace FirmTask
         public void CheckingWorkers()
         {
             Console.WriteLine("Checking workers");
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Full name: {0}, experience: {1}, type employee: {2}", FullName, Experience, "Brigadier");
         }
     }
 }

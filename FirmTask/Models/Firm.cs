@@ -1,4 +1,4 @@
-﻿using FirmTask.Models;
+﻿using FirmTask.Containers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ namespace FirmTask
 {
     public class Firm
     {
-        public EmployeeCollection<BaseEmployee> employeeCollection { get; set; }
+        public MyCollection<BaseEmployee> Employees;
 
         public Firm()
         {
-            employeeCollection = new EmployeeCollection<BaseEmployee>();
+            Employees = new MyCollection<BaseEmployee>();
         }
     }
 }
