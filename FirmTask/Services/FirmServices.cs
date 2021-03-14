@@ -1,10 +1,6 @@
 ﻿using FirmTask.Containers;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FirmTask.Services
 {
@@ -18,8 +14,9 @@ namespace FirmTask.Services
             FillingData();
         }
 
-        public bool IsContainEmployee(BaseEmployee employee) 
+        public bool IsContainEmployee(string fullName) 
         {
+            var employee = _firm.Employees.Where(x => x.FullName == fullName).FirstOrDefault();
             return _firm.Employees.IsContain(employee);
         }
 
@@ -28,23 +25,26 @@ namespace FirmTask.Services
             _firm.Employees += employee;
         }
 
-        public void RemoveEmployee(BaseEmployee employee) 
+        public void RemoveEmployee(string fullName) 
         {
+            var employee = _firm.Employees.Where(x => x.FullName == fullName).FirstOrDefault();
             _firm.Employees -= employee;
         }
-
 
         public IEnumerable<BaseEmployee> GetEmloyee<T>() where T : BaseEmployee
         {
             return _firm.Employees.GetEpm<BaseEmployee, T>();
         }
 
-
         public int GetCount<T>()  where T: BaseEmployee
         {
             return _firm.Employees.CountOfEmployee<BaseEmployee, T>();
         }
 
+        public BaseEmployee GetEmployee(string fullName) 
+        {
+            return _firm.Employees.Where(x => x.FullName == fullName).FirstOrDefault();
+        }
 
         public void FillingData()
         {

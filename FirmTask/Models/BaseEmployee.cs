@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FirmTask
+﻿namespace FirmTask
 {
     public abstract class BaseEmployee
     {
@@ -12,7 +6,9 @@ namespace FirmTask
 
         public string FullName { get; set; }
 
-        public void ToWork() { }
+        public virtual string ToWork() { return null; }
+
+        public virtual string SpecialTask() { return null; }
 
         public override string ToString()
         {

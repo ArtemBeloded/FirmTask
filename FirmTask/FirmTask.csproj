@@ -51,6 +51,7 @@
     <Compile Include="Models\Firm.cs" />
     <Compile Include="Models\Employees\Manager.cs" />
     <Compile Include="FirmManager.cs" />
+    <Compile Include="Printer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Employees\Worker.cs" />
     <Compile Include="Services\FirmServices.cs" />

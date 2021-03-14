@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FirmTask
+﻿namespace FirmTask
 {
     public class Manager : BaseEmployee
     {
-        public new void ToWork()
+        public override string ToWork()
         {
-            Console.WriteLine("Сollecting orders");
+            return "Сollecting orders";
         }
 
-        public void IssueOfAssignment() 
+        public override string SpecialTask() 
         {
-            Console.WriteLine("Task issued");
+            return "Task issued";
         }
 
         public override string ToString()
         {
-            return string.Format("Full name: {0}, experience: {1}, type employee: {2}", FullName, Experience, "Manager");
+            return string.Format("Full name: {0}; experience: {1}; type employee: {2}", FullName, Experience, "Manager");
         }
     }
 }
